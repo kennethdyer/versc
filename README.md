@@ -1,8 +1,8 @@
 # versc
 
-Versc is a diagnostic tool for documentation projects that rely on reStructuredText as source code.
-Its purpose is to scan the source repository for version descriptors that are EOL.  It then prints
-any that it finds to stdout in a grep-like format.
+Versc is a diagnostic tool written in Go for documentation projects that rely on reStructuredText 
+as source code. Its purpose is to scan the source repository for version descriptors that are EOL.  
+Once it finds the offending version descriptors, it prints them to stdout in a grep-like format.
 
 This allows the writer to identify the files that need attention when a version of the product goes EOL.
 
