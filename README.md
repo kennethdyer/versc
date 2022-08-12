@@ -1,8 +1,10 @@
 # versc
 
-Versc is a tool for use in documentation projects that rely on reStructuredText as source code.
-It scans the givne source repository, finds all version descriptors that are not in a list 
-of supported versions, then prints the finds to stdout in a format similar to grep.
+Versc is a diagnostic tool for documentation projects that rely on reStructuredText as source code.
+Its purpose is to scan the source repository for version descriptors that are EOL.  It then prints
+any that it finds to stdout in a grep-like format.
+
+This allows the writer to identify the files that need attention when a version of the product goes EOL.
 
 ## Installation
 
