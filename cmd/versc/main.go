@@ -9,8 +9,8 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 
-    "github.com/kennethdyer/versc/logger"
-    "github.com/kennethdyer/versc/search"
+	"github.com/kennethdyer/versc/logger"
+	"github.com/kennethdyer/versc/search"
 )
 
 const ver string = "0.1.0"
@@ -54,13 +54,12 @@ func init() {
 	// Parallel Defaults
 	viper.SetDefault("parallel", runtime.NumCPU())
 
-    // Include Patterns
-    viper.SetDefault("exclude_pattern", "release-notes")
-    viper.SetDefault("include_extensions", ".rst,.txt,.yml,.yaml")
+	// Include Patterns
+	viper.SetDefault("exclude_pattern", "release-notes")
+	viper.SetDefault("include_extensions", ".rst,.txt,.yml,.yaml")
 
-
-    // Set Timeout
-    viper.SetDefault("timeout", 50)
+	// Set Timeout
+	viper.SetDefault("timeout", 50)
 
 	// Set and Read Configuration File
 	viper.AddConfigPath(".")
@@ -70,7 +69,7 @@ func init() {
 	viper.SetConfigType("yaml")
 	err := viper.ReadInConfig()
 	if err != nil {
-        logger.Warn("Unable to load configuration file:\n", err)
+		logger.Warn("Unable to load configuration file:\n", err)
 	}
 
 }
@@ -80,15 +79,14 @@ var cmd = &cobra.Command{
 	Use:     "versc",
 	Short:   "Scans documentation projects for version descriptions",
 	Version: ver,
-    Run: func(cmd *cobra.Command, args []string) {
-        if len(args) == 1 {
-            search.RunSearch(args[0], []string{})
-        } else {
-            search.RunSearch(args[0], args[1:])
-        }
-    },
+	Run: func(cmd *cobra.Command, args []string) {
+		if len(args) == 1 {
+			search.RunSearch(args[0], []string{})
+		} else {
+			search.RunSearch(args[0], args[1:])
+		}
+	},
 }
-
 
 func main() {
 	/******************************** OPTIONS *************************************/
