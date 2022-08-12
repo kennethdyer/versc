@@ -57,7 +57,7 @@ func collectData(files []string, keys []string) []string{
         case ret = <- outChan:
             rets = append(rets, ret)
         case <-time.After(time.Second * timeout):
-            return sortStrings(rets)
+            return append(sortStrings(rets), "\n")
         }
     }
 }
