@@ -2,7 +2,7 @@
 
 Versc is a tool for use in documentation projects that rely on reStructuredText as source code.
 It scans the givne source repository, finds all version descriptors that are not in a list 
-of supported versions, then prints the finds to stdout in a format similar to `grep`.
+of supported versions, then prints the finds to stdout in a format similar to grep.
 
 ## Installation
 
