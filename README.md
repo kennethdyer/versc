@@ -70,5 +70,6 @@ $ versc source myProductKey
 ## Explanation of the Name
 
 The name versc derives from a syncopation of the boring descriptor "version scanner,"
-which here has an Old English pronunciation of `/vərʃ/`.
+which has here been given an much more interesting Old English pronunciation of `/vərʃ/`,
+(for all those folks who told me I'd never get to use my philology degrees at work).
 
