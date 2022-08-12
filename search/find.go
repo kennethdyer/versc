@@ -17,7 +17,7 @@ func matchVers(ver string, vers []string) bool {
 
 func formatLine(ver string, line *Line) string {
     return fmt.Sprintf(
-        "Version %s\t%s:%d\t%s",
+        "%s\t-\t%s:%d\t%s",
         ver,
         line.Path,
         line.Linenum,
