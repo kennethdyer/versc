@@ -59,6 +59,9 @@ func init() {
     viper.SetDefault("include_extensions", ".rst,.txt,.yml,.yaml")
 
 
+    // Set Timeout
+    viper.SetDefault("timeout", 1)
+
 	// Set and Read Configuration File
 	viper.AddConfigPath(".")
 	viper.AddConfigPath("$HOME/.config/avocet")
