@@ -20,7 +20,7 @@ func formatLine(ver string, line *Line) string {
         "%s\t-\t%s:%d\t%s",
         ver,
         line.Path,
-        line.Linenum,
+        line.Linenum + 1,
         strings.TrimSpace(line.Raw),
     )
 }
