@@ -7,6 +7,9 @@ import (
 	"github.com/spf13/viper"
 )
 
+// Product represents a product mapped in the configuration file.  Every product must have a name and
+// an array of valid version numbers to use to determining whether a version descriptor match is
+// legitimate or obsolete.
 type Product struct {
 	Name     string   `mapstructure:"name"`
 	Versions []string `mapstructure:"versions"`
@@ -42,7 +45,7 @@ func findKey(keys []string) string {
 	prods := make(map[string]Product)
 	viper.UnmarshalKey("products", &prods)
 	key := ""
-	for k, _ := range prods {
+	for k := range prods {
 		key = k
 	}
 
