@@ -40,7 +40,7 @@ func collectData(files []string, keys []string) []string{
     }
 
     // Initialize Line Worker Pool
-    for w := 0; w < parallel * 3; w++ {
+    for w := 0; w < parallel * 4; w++ {
         go LineWorker(w, res, vers, medChan, outChan)
     }
 
@@ -56,7 +56,7 @@ func collectData(files []string, keys []string) []string{
         select {
         case ret = <- outChan:
             rets = append(rets, ret)
-        case <-time.After(time.Second * timeout):
+        case <-time.After(time.Millisecond * timeout):
             return append(sortStrings(rets), "\n")
         }
     }

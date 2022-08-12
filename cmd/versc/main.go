@@ -60,7 +60,7 @@ func init() {
 
 
     // Set Timeout
-    viper.SetDefault("timeout", 1)
+    viper.SetDefault("timeout", 50)
 
 	// Set and Read Configuration File
 	viper.AddConfigPath(".")
