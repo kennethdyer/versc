@@ -57,6 +57,7 @@ To print unsupported version descriptors, call versc with the directory you want
 
 ```
 $ versc source
+2.0  -  source/reference/feature   Starting in MyProduct 2.0, xyz occurs
 ```
  
 If you have multiple products specified, provide the product key to the search:
